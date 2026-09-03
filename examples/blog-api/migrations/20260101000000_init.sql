@@ -1,0 +1,11 @@
+CREATE TABLE users (
+  id SERIAL PRIMARY KEY,
+  name TEXT NOT NULL,
+  age INTEGER
+);
+
+CREATE TABLE posts (
+  id SERIAL PRIMARY KEY,
+  title TEXT NOT NULL,
+  "userId" INTEGER NOT NULL REFERENCES users(id)
+);
