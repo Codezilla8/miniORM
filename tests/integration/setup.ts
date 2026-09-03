@@ -22,7 +22,7 @@ export async function resetSchema(client: Client): Promise<void> {
   await client.pool.query(`
     DROP TABLE IF EXISTS posts CASCADE;
     DROP TABLE IF EXISTS users CASCADE;
-    DROP TABLE IF EXISTS _miniorm_migrations CASCADE;
+    
 
     CREATE TABLE users (
       id SERIAL PRIMARY KEY,
